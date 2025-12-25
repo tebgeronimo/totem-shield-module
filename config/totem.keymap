@@ -12,10 +12,15 @@
 &mt {
     /* tapping-term-ms = <170>; */
 
-    quick-tap-ms = <250>;
+    quick-tap-ms = <180>;
 
     /* flavor = "hold-preferred"; */
     /* global-quick-tap; */
+
+    bindings = <&kp>, <&kp>;
+
+    tapping-term-ms = <150>;
+    flavor = "balanced";
 };
 
 &lt {
