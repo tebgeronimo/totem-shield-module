@@ -17,9 +17,9 @@
     /* flavor = "hold-preferred"; */
     /* global-quick-tap; */
 
-    tapping-term-ms = <250>;
-    flavor = "tap-preferred";
-    require-prior-idle-ms = <200>;
+    tapping-term-ms = <200>;
+    flavor = "balanced";
+    require-prior-idle-ms = <180>;
 };
 
 &lt {
