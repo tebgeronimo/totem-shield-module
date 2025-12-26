@@ -12,7 +12,6 @@
 #define NSL  2
 #define ADJ  3
 
-
 &mt {
     /* tapping-term-ms = <170>; */
 
@@ -111,6 +110,7 @@
         P_O_BACKSPACE {
             bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
+            layers = <0 1>;
         };
 
         I_O_ENTER {
@@ -122,6 +122,7 @@
         W_E_ESC {
             bindings = <&kp ESCAPE>;
             key-positions = <1 2>;
+            layers = <0 1>;
         };
 
         L_APOS_SEMI {
@@ -132,6 +133,7 @@
         R_T_BRAKT {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <3 4>;
+            layers = <0 1>;
         };
 
         Y_U_BRACK {
