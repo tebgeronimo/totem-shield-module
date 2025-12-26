@@ -35,6 +35,20 @@
 
 &sk { quick-release; };
 
+&mmv {
+    trigger-period-ms = <0>;
+    delay-ms = <0>;
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <1>;
+};
+
+&msc {
+    trigger-period-ms = <0>;
+    delay-ms = <0>;
+    time-to-max-speed-ms = <30>;
+    acceleration-exponent = <0>;
+};
+
 / {
     behaviors {
         /*
@@ -195,7 +209,7 @@
         compatible = "zmk,combos";
 
         Q_W_tilde {
-            bindings = <&kp TILDE>;
+            bindings = <&kp GRAVE>;
             key-positions = <0 1>;
         };
 
@@ -271,10 +285,10 @@
         num_sym_layer {
             label = "NSL";
             bindings = <
-        &kp LS(EXCL)             &kp LS(AT)             &kp LS(POUND)          &kp LS(DLLR)               &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)                &kp LS(STAR)            &kp MINUS               &kp EQUAL
-        &mt LEFT_SHIFT NUMBER_1  &mt LEFT_GUI NUMBER_2  &mt LEFT_ALT NUMBER_3  &mt LEFT_CONTROL NUMBER_4  &kp N5           &kp N6         &mt RIGHT_CONTROL NUMBER_7  &mt RIGHT_ALT NUMBER_8  &mt RIGHT_GUI NUMBER_9  &mt RIGHT_SHIFT NUMBER_0
-&trans  &kp C_BRIGHTNESS_DEC     &kp C_BRIGHTNESS_INC   &kp C_PREV             &kp C_PLAY_PAUSE           &kp C_NEXT       &caps_word     &kp LG(SPACE)               &kp C_MUTE              &kp C_VOL_DN            &kp C_VOLUME_UP           &trans
-                                                        &trans                 &trans                     &trans           &mo 4          &trans                      &trans
+        &kp LS(EXCL)                     &kp LS(AT)             &kp LS(POUND)          &kp LS(DLLR)               &kp LS(PRCNT)    &kp LS(CARET)  &kp LS(AMPS)                &kp LS(STAR)            &kp MINUS               &kp EQUAL
+        &kp NUMBER_1                     &mt LEFT_GUI NUMBER_2  &mt LEFT_ALT NUMBER_3  &mt LEFT_CONTROL NUMBER_4  &kp N5           &kp N6         &mt RIGHT_CONTROL NUMBER_7  &mt RIGHT_ALT NUMBER_8  &mt RIGHT_GUI NUMBER_9  &kp N0
+&trans  &mt LEFT_SHIFT C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC   &kp C_PREV             &kp C_PLAY_PAUSE           &kp C_NEXT       &caps_word     &kp LG(SPACE)               &kp C_MUTE              &kp C_VOL_DN            &mt RIGHT_SHIFT C_VOLUME_UP  &trans
+                                                                &trans                 &trans                     &trans           &mo 4          &trans                      &trans
             >;
         };
 
