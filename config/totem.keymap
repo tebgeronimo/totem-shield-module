@@ -35,7 +35,7 @@
 };
 
 &mmv {
-    max-speed = <2000>;
+
     trigger-period-ms = <1>;
     delay-ms = <1>;
     time-to-max-speed-ms = <20>;
@@ -43,7 +43,7 @@
 };
 
 &msc {
-    max-speed = <2000>;
+
     trigger-period-ms = <1>;
     delay-ms = <1>;
     time-to-max-speed-ms = <20>;
