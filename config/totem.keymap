@@ -9,6 +9,9 @@
 #define NSL  2
 #define ADJ  3
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+
 &mt {
     /* tapping-term-ms = <170>; */
 
