@@ -37,17 +37,16 @@
 };
 
 &mmv {
-    trigger-period-ms = <1>;
-    delay-ms = <1>;
+    delay-ms = <0>;
     time-to-max-speed-ms = <20>;
-    acceleration-exponent = <1>;
+    acceleration-exponent = <2>;
 };
 
 &msc {
-    trigger-period-ms = <1>;
-    delay-ms = <1>;
+    trigger-period-ms = <0>;
+    delay-ms = <0>;
     time-to-max-speed-ms = <20>;
-    acceleration-exponent = <1>;
+    acceleration-exponent = <0>;
 };
 
 / {
@@ -188,9 +187,9 @@
         nav_layer {
             label = "NAV";
             bindings = <
-        &trans     &trans    &trans    &trans     &trans    &mkp MB1  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_UP  &mmv MOVE_RIGHT
-        &trans     &kp LGUI  &kp LALT  &kp LCTRL  &trans    &mkp MB2  &kp LEFT        &kp DOWN         &kp UP        &kp RIGHT
-&trans  &kp LSHFT  &trans    &trans    &trans     &trans    &trans    &msc SCRL_LEFT  &msc MOVE_Y(-5)  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+        &trans     &trans    &trans    &trans     &trans    &mkp MB1  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+        &trans     &kp LGUI  &kp LALT  &kp LCTRL  &trans    &mkp MB2  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
+&trans  &kp LSHFT  &trans    &trans    &trans     &trans    &trans    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
                              &trans    &trans     &mo 4     &trans    &trans          &trans
             >;
         };
