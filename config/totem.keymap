@@ -54,78 +54,16 @@
         /*
         *
         */
-
-        caps_tdr: caps_tap_dance_right {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-
-            /* bindings = <&smt RSHFT RALT>, <&caps_word>; */
-
-            bindings = <&sk RALT>, <&caps_word>;
-        };
-
-        caps_tdl: caps_tap_dance_left {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&slt 2 LSHFT>, <&caps_word>;
-        };
-
         /*   Custom mod-tap/layer-tap behavior.
         *   The main idea is to accomodate
         *   the one-shot (i.e. sticky) mods.
         */
-
-        slt: sticky_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-
-            /* require-prior-idle-ms = <250>; */
-
-            bindings = <&mo>, <&sk>;
-
-            display-name = "Sticky-Layer-Tap";
-        };
-
-        smt: sticky_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&sk>;
-
-            display-name = "Sticky-Mod-Tap";
-        };
-
         /*   CTRL -based behavior of what would normally be a plain SPACE.
         *   Implemented as nested mod-morphs. The main idea is that `space`
         *   and `comma` are among the most commonly typed characters; hence
         *   their optimized placement (again, not without some individual
         *   preferences).
         */
-
-        spc_L1: rctl_space {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&lt 1 SPACE>, <&kp COMMA>;
-
-            mods = <(MOD_RCTL)>;
-        };
-
-        spc_L0: lctl_space {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-
-            /* bindings = <&spc_L1>, <&kp COLON>; */
-
-            bindings = <&lt 1 SPACE>, <&kp COLON>;
-
-            mods = <(MOD_LCTL)>;
-        };
-
         /*   Quasi-Shift behavior for certain keys.
         *   In the traditional QWERTY layout/keyboard proper,
         *   pairs of non-alphanumeric symbols seem to be tightly coupled
@@ -133,60 +71,10 @@
         *   In ZMK, there could actually be an easier way to decouple them,
         *   and, as such, this schema is also subject to revision.
         */
-
-        s_minus: shift_minus {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp PLUS>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        s_dot: shift_dot {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp GT>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        s_slash: shift_slash {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH>, <&kp LT>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        s_quote: shift_quotes {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp APOS>, <&kp DQT>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        ecc: esc_comma_ctl {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&mt LCTRL ESC>, <&kp COMMA>;
-
-            mods = <MOD_RCTL>;
-        };
-
         /*
         *
         *
         */
-
-        mm_ctrl_bspc: ctrl_bspc {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&mt RCTRL BSPC>, <&kp BSPC>;
-
-            mods = <MOD_LCTL>;
-            keep-mods = <MOD_LCTL>;
-        };
     };
 
     macros {
