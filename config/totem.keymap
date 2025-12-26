@@ -35,7 +35,8 @@
 };
 
 &mmv {
-
+    max-x = <100>; // Faster X movement
+    max-y = <100>; // Faster Y movement
     trigger-period-ms = <1>;
     delay-ms = <1>;
     time-to-max-speed-ms = <20>;
@@ -43,7 +44,8 @@
 };
 
 &msc {
-
+    max-x = <100>; // Faster X movement
+    max-y = <100>; // Faster Y movement
     trigger-period-ms = <1>;
     delay-ms = <1>;
     time-to-max-speed-ms = <20>;
