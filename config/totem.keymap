@@ -38,6 +38,8 @@
     time-to-max-speed-ms = <50>;
 };
 
+&msc { time-to-max-speed-ms = <50>; };
+
 / {
     behaviors {
         /*
