@@ -17,27 +17,25 @@
     /* flavor = "hold-preferred"; */
     /* global-quick-tap; */
 
-    tapping-term-ms = <280>;
-    flavor = "tap-unless-interrupted";
-    require-prior-idle-ms = <200>;
+    tapping-term-ms = <300>;
+    flavor = "balanced";
+    require-prior-idle-ms = <150>;
     hold-trigger-key-positions = <>;
 };
 
 &lt {
     /* tapping-term-ms = <170>; */
-
-    quick-tap-ms = <250>;
-
     /* flavor = "tap-preferred"; */
     /* global-quick-tap; */
 
-    require-prior-idle-ms = <250>;
+    require-prior-idle-ms = <150>;
+    flavor = "balanced";
 };
 
 &mmv {
     delay-ms = <0>;
     acceleration-exponent = <1>;
-    time-to-max-speed-ms = <600>;
+    time-to-max-speed-ms = <50>;
 };
 
 / {
