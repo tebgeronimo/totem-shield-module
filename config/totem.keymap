@@ -201,9 +201,9 @@
         nav_layer {
             label = "NAV";
             bindings = <
-        &trans     &trans    &trans    &trans     &trans    &mkp MB1  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-        &trans     &kp LGUI  &kp LALT  &kp LCTRL  &trans    &mkp MB2  &kp LEFT          &kp DOWN        &kp UP        &kp RIGHT
-&trans  &kp LSHFT  &trans    &trans    &trans     &trans    &trans    &kp LG(LA(LEFT))  &msc SCRL_DOWN  &msc SCRL_UP  &kp LG(LA(RIGHT))  &trans
+        &trans     &trans    &trans    &trans     &trans    &mkp MB1  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT
+        &trans     &kp LGUI  &kp LALT  &kp LCTRL  &trans    &mkp MB2  &kp LEFT          &kp DOWN        &kp UP          &kp RIGHT
+&trans  &kp LSHFT  &trans    &trans    &trans     &trans    &trans    &kp LG(LA(LEFT))  &msc SCRL_UP    &msc SCRL_DOWN  &kp LG(LA(RIGHT))  &trans
                              &trans    &trans     &mo 3     &trans    &trans            &trans
             >;
         };
