@@ -108,7 +108,7 @@
 
         I_O_ENTER {
             bindings = <&kp ENTER>;
-            key-positions = <8 9>;
+            key-positions = <28 29>;
             layers = <0 1>;
             timeout-ms = <40>;
             require-prior-idle-ms = <250>;
