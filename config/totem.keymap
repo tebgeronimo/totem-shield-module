@@ -28,7 +28,7 @@
     /* global-quick-tap; */
 
     require-prior-idle-ms = <150>;
-    flavor = "balanced";
+    flavor = "hold-preferred";
 };
 
 &mmv {
